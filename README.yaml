@@ -1,4 +1,4 @@
-name: Terraform Transit Gateway Module
+name: Terraform AWS SES Configuration Set Setup
 #logo: logo/logo.jpg
 
 license: "APACHE2"
@@ -8,10 +8,15 @@ copyrights:
     url: "https://cloudops.works"
     year: "2024"
 
-github_repo: cloudopsworks/terraform-module-aws-vpc-setup
+github_repo: cloudopsworks/terraform-module-aws-ses-configuration-sets
 
 description: |-
-  VPC Module for setting up transit gateway with ResourceAccessMananger support.
+  This Terraform module sets up AWS SES (Simple Email Service) Configuration Sets. Configuration Sets in 
+  SES are used to manage groups of email sending rules. This module allows you to define various options for delivery, 
+  reputation, sending, suppression, tracking, and VDM (Virtual Deliverability Manager) settings. 
+  It supports dynamic configuration based on the provided input variables, making it flexible and customizable for 
+  different use cases. The module also includes tagging support to help organize and manage resources within your 
+  AWS environment.
 
 # Introduction to the project
 #introduction: |-
