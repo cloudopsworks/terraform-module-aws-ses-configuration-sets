@@ -74,7 +74,7 @@ resource "aws_sesv2_configuration_set" "this" {
 
 resource "aws_sesv2_configuration_set_event_destination" "this" {
   for_each               = local.event_destinations
-  configuration_set_name = aws_sesv2_configuration_set.this[each.value.configset].name
+  configuration_set_name = aws_sesv2_configuration_set.this[each.value.configset].configuration_set_name
   event_destination_name = each.value.destination_name
 
   event_destination {
