@@ -12,12 +12,12 @@ output "configuration_sets" {
   }
 }
 
-# output "event_destinations" {
-#   value = {
-#     for k, v in aws_sesv2_configuration_set_event_destination.this : k => {
-#       configuration_set_name = v.configuration_set_name
-#       destinantion_name      = v.destinantion_name
-#       id                     = v.id
-#     }
-#   }
-# }
+output "event_destinations" {
+  value = {
+    for k, v in aws_sesv2_configuration_set_event_destination.this : k => {
+      configuration_set_name = v.configuration_set_name
+      destinantion_name      = v.destinantion_name
+      id                     = v.id
+    }
+  }
+}
