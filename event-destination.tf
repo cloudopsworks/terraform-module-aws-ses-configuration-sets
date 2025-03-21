@@ -20,6 +20,14 @@ output "event_destinations_map" {
   value = local.event_destinations
 }
 
+output "test" {
+  value = {
+    for k, v in local.event_destinations : k => {
+      sns = length(try(v.destination.sns, {}))
+    }
+  }
+}
+
 # resource "aws_sesv2_configuration_set_event_destination" "this" {
 #   for_each               = local.event_destinations
 #   configuration_set_name = aws_sesv2_configuration_set.this[each.value.configset].configuration_set_name
