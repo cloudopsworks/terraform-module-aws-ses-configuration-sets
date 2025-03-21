@@ -7,7 +7,7 @@
 locals {
   event_destinations = merge([
     for key, config in var.configs : {
-      for k, dest in config : "${key}-${k}" => {
+      for k, dest in config.event_destinations : "${key}-${k}" => {
         configset         = key
         destinantion_name = k
         destination       = dest
