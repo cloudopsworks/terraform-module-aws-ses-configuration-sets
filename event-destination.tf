@@ -31,7 +31,7 @@ output "test" {
 # resource "aws_sesv2_configuration_set_event_destination" "this" {
 #   for_each               = local.event_destinations
 #   configuration_set_name = aws_sesv2_configuration_set.this[each.value.configset].configuration_set_name
-#   event_destination_name = each.value.destination.name
+#   event_destination_name = each.value.destinantion_name
 #
 #   dynamic "event_destination" {
 #     for_each = length(try(each.value.destination.cloudwatch, {})) > 0 ? [1] : []
